@@ -1,0 +1,15 @@
+/* styles/NotificationList.module.css */
+.notificationList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .notificationList li {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+  }
+  

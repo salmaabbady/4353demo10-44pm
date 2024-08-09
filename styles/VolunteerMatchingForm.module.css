@@ -1,0 +1,61 @@
+/* styles/VolunteerMatchingForm.module.css */
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  .formContainer div {
+    margin-bottom: 15px;
+  }
+  
+  .label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .input,
+  .select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .button {
+    padding: 10px 15px;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .button:hover {
+    background-color: #005bb5;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+  }
+  
+  .notifications {
+    margin-top: 20px;
+  }
+  
+  .notifications div {
+    padding: 10px;
+    border: 1px solid #0070f3;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: #e6f4ff;
+  }
+  

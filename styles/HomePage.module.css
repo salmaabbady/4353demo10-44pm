@@ -1,0 +1,48 @@
+/* src/styles/HomePage.module.css */
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  .nav {
+    position: fixed; /* Fix the navigation bar */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    background-color: #fff; /* Ensure background color to cover content behind */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+    z-index: 1000; /* Ensure nav is above other content */
+    box-sizing: border-box; /* Ensure padding doesn't affect the width */
+  }
+  
+  .nav a {
+    margin-left: 20px;
+    color: #0070f3;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .nav a:hover {
+    color: #005bb5;
+  }
+  
+  .content {
+    margin-top: 60px; /* Add margin to the top of the content to prevent it from being hidden under the nav */
+    color: #333;
+    text-align: center;
+  }
+  
+  .heading {
+    font-size: 36px; /* Increased font size */
+    margin-bottom: 20px; /* Add margin to the bottom of the heading */
+  }
+  

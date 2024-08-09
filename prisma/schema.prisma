@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model UserCredentials {
+  id       Int    @id @default(autoincrement())
+  email    String @unique
+  password String
+  profile  UserProfile?
+}
+
+model UserProfile {
+  userId       Int       @id
+  fullName     String
+  address1     String
+  address2     String?
+  city         String
+  state        String
+  zipCode      String
+  skills       Json
+  preferences  String?
+  availability Json
+  user         UserCredentials @relation(fields: [userId], references: [id])
+}
+
+model EventDetails {
+  id               Int      @id @default(autoincrement())
+  eventName        String
+  eventDescription String
+  location         String
+  requiredSkills   Json
+  urgency          String
+  eventDate        DateTime
+  volunteerHistory VolunteerHistory[]
+}
+
+model VolunteerHistory {
+  id                   Int      @id @default(autoincrement())
+  volunteerId          Int
+  eventId              Int
+  participationStatus  String
+  event                EventDetails @relation(fields: [eventId], references: [id])
+}
